@@ -25,15 +25,25 @@ class Solution:
         # return dp[-1]
 
         #通用方法：允许买卖 k 多次的方法
+        # n = len(prices)
+        # if not n: return 0
+        # dp = [[0]*n for i in range(2)] #k=2 允许买卖 k-1次
+        # for k in range(1, 2):
+        #     pre_max = -prices[0]
+        #     for i in range(1, n):
+        #         pre_max = max(dp[k-1][i-1] - prices[i], pre_max)
+        #         dp[k][i] = max(dp[k][i-1], pre_max + prices[i])
+        # return dp[-1][-1]
+
+        #通用方法2：允许买卖 k 多次的方法
         n = len(prices)
         if not n: return 0
-        dp = [[0]*n for i in range(2)] #k=2 允许买卖 k-1次
-        for k in range(1, 2):
-            pre_max = -prices[0]
-            for i in range(1, n):
-                pre_max = max(dp[k-1][i-1] - prices[i], pre_max)
-                dp[k][i] = max(dp[k][i-1], pre_max + prices[i])
-        return dp[-1][-1]
+        dp = [0]*n #k=2 允许买卖 k-1次
+        pre_max = -prices[0]
+        for i in range(1, n):
+            pre_max = max(-prices[i], pre_max)
+            dp[i] = max(dp[i-1], pre_max + prices[i])
+        return dp[-1]
 
 
 # @lc code=end

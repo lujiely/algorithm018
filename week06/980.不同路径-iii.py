@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def uniquePathsIII(self, grid: List[List[int]]) -> int:
+    def uniquePathsIII(self, grid):
         start = end = None
         m = len(grid)
         n = len(grid[0]) if m else 0

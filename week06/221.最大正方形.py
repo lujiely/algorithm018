@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def maximalSquare(self, matrix: List[List[str]]) -> int:
+    def maximalSquare(self, matrix):
         m = len(matrix)
         n = len(matrix[0]) if m else 0
         dp = [[0]*(n+1) for _ in range(m+1)]

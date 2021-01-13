@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def splitArray(self, nums: List[int], m: int) -> int:
+    def splitArray(self, nums, m):
 
         def groupCount(mid):
             count, s = 0, 0

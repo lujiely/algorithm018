@@ -6,24 +6,24 @@
 
 # @lc code=start
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution:
     import collections
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def levelOrder(self, root):
         # #方法一：BFS
         res = []
         def bfs(root):
-            queue = collections.deque()
+            queue = []
             queue.append(root)
             while queue:
                 curVal = []
                 for _ in range(len(queue)):
-                    node = queue.popleft()
+                    node = queue.pop(0)
                     if not node: continue
                     curVal.append(node.val)
                     queue.append(node.left)

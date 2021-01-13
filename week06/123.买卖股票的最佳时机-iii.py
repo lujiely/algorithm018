@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices):
         n = len(prices)
         if not n: return 0
         dp = [[0]*n for i in range(3)]

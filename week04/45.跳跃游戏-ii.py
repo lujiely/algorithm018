@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums):
         max_position, end, step = 0, 0, 0
         for i in range(len(nums)-1):
             max_position = max(max_position, i + nums[i]) 

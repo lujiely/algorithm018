@@ -1,13 +1,24 @@
-for i in range(10-1,0,-1):
-    print(i)
-    i = 5
+#coding:utf-8
+class Solution(object):
 
-class A(object):
-    def __init__(self):
-        print("init")
-    def __del__(self):
-        print("del")
-print(A() is A())
-print(id(A()) is id(A()))
+    def getSum(self, num):
+        if num == 0:
+            return 0
+        if num:
+            res = num + self.getSum(num-1)
+        return res
+
+import sys
+def twoSum():
+    lines = sys.stdin.readline().split()
+    print(lines)
 
 
+if __name__ == '__main__':
+    import sys
+    line = sys.stdin.readline().split()
+    a = int(line[0])
+    b = int(line[1])
+
+    print(a + b)
+    sys.stdout.write("a")

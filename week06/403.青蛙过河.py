@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    def canCross(self, stones: List[int]) -> bool:
+    def canCross(self, stones):
         '''
              0,     1,   3,     5,    7,    6,    8,    12,    17
         0,  False  True  False False False False False  False  False

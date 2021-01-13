@@ -7,7 +7,7 @@
 # @lc code=start
 import bisect
 class Solution:
-    def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:
+    def maxSumSubmatrix(self, matrix, k):
         m = len(matrix)
         n = len(matrix[0]) if m else 0
         res = float("-inf")

@@ -7,7 +7,7 @@
 # @lc code=start
 import collections
 class Solution:
-    def leastInterval(self, tasks: List[str], n: int) -> int:
+    def leastInterval(self, tasks, n):
         length = len(tasks)
         counter = collections.Counter(tasks)
         max_task_count = max(counter.values())

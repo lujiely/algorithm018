@@ -23,5 +23,14 @@ class Solution:
                 else:
                     left = mid + 1
         return -1
+
+
+        #方法2:
+        # dict = {}
+        # for i, num in enumerate(nums):
+        #     dict[num] = i
+        #     if target in dict:
+        #         return dict[target]
+        # return -1
 # @lc code=end
 
